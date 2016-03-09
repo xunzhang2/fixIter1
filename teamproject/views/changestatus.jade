@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    form(action='/changestatus' method='post' target='_blank')
+      select(name='cars')
+        option(value='volvo') Volvo
+        option(value='saab') Saab
+        option(value='fiat') Fiat
+        option(value='audi') Audi
+      input(type='submit' value='Change')

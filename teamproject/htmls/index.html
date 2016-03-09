@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Chat room</title>
+</head>
+
+<body>
+    <h1>Welcome to SSNoC Chat Room!</h1>
+    <form action="/login" method="post">
+    <input id="username" type="text" placeholder="Username" onchange="checkUsername()">
+    <input id="password" type="password" placeholder="Password" onchange="checkPassword()">
+    <div id="hideDiv" style="display:none">
+    <input id="password2" type="password" placeholder="Confirm Password" display="none" onchange="checkPassword()">
+    </div>
+    <br>
+    <input id="login" type="submit" value="Login" disabled="disabled">
+    <input id="signUp" type="button" value="Sign up" disabled="disabled" onclick="signup()">
+    <p id="hide1"></p>
+    </form>
+</body>
+
+</html>
+                

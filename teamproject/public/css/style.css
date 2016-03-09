@@ -1,0 +1,7 @@
+
+/*navigotor*/
+ul#nav{ max-width:100%; height:60px; background:#5CAD3E; margin:0 auto} 
+ul#nav li{display:inline; height:60px} 
+ul#nav li a{display:inline-block; padding:0 20px; height:60px; line-height:60px;
+ color:#FFF; font-family:"\5FAE\8F6F\96C5\9ED1"; font-size:16px} 
+ul#nav li a:hover{background:#58DA28}

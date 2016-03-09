@@ -1,0 +1,26 @@
+doctype html
+html
+  include navigator
+  head
+    script(src='//code.jquery.com/jquery-1.11.0.min.js')
+    script(src='/js/index.js')
+    title Chat room
+  body
+    h1 Welcome to SSNoC Chat Room!
+    |     
+    form(action='/login', method='post')
+      input#username(type='text', name="username", placeholder='Username', onchange='checkUsername()')
+      |     
+      input#password(type='password', name="password", placeholder='Password', onchange='checkPassword()')
+      |     
+      div#hideDiv(style='display:none')
+        input#password2(type='password', placeholder='Confirm Password', onchange='checkPassword()')
+      |     
+      br
+      |     
+      input#login(type='submit', value='Login', disabled='disabled')
+      |     
+      input#signUp(type='button', value='Sign up', disabled='disabled', onclick='signup()')
+    |     
+    p#hide1
+

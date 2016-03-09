@@ -1,0 +1,38 @@
+doctype html
+html
+  include navigator
+  head
+    script(src='//code.jquery.com/jquery-1.11.0.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/publicchat.js')
+    title SSNoC Public Chat
+  body
+    h1 SSNoC Public Chat
+    div
+      div
+        span Welcome, 
+          input(type="text", value="#{username}")#name
+          h ! An 
+          b(style='color:green') OK
+          h  status means "I am OK, I do not need help.". An 
+          b(style='color:yellow') Help
+          h  status means "I need help, but this is not a life threatening emergency.". An 
+          b(style='color:red') Emergency
+          h  status means "I need help now, as this is a life threatening emergency!". An 
+          b(style='color:blue') Undefined
+          h  status means "The user has not been providing her status yet.". To change status, please click on "Change Status" button in the navigator.
+        br
+        br
+        form#messageForm
+          textarea(rows="4", cols="50", placeholder="Post something!")#outgoingMessage
+          input(type="button", value="Post", disabled=true)#send
+        select#changestatus
+            option(value='OK') OK
+            option(value='Help') Help
+            option(value='Emergency') Emergency
+            option(value='Undefined') Undefined
+      div
+        h3 Participants
+        div#participants
+    h3 Messages
+    div#messages
