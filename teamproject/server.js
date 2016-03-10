@@ -78,5 +78,10 @@ app.post("/login",function(request,response){
 
 app.get("/changestatus",function(request,response){
 	response.render("changestatus");
-})
+});
+
+app.post("/changestatus",function(request,response){
+    // db
+    
+});
 
