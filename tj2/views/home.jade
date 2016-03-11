@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  header#top.header
+    .text-vertical-center
+    
+
+      if (locals.success)
+        .alert.alert-success(style='width:20%; margin:auto')
+          a.close(href='#', data-dismiss='alert', aria-label='close') ×
+          strong #{message}
+          |  Some status explanation here.
+      if(locals.failure)
+        .alert.alert-danger(style='width:20%; margin:auto')
+          a.close(href='#', data-dismiss='alert', aria-label='close') ×
+          strong #{message}
+          |  Some status explanation here.
+                            
+    
+      span Welcome, 
+          h#name
+          h ! An 
+          b(style='color:green') OK
+          h  status means "I am OK, I do not need help.". An 
+          b(style='color:yellow') Help
+          h  status means "I need help, but this is not a life threatening emergency.". An 
+          b(style='color:red') Emergency
+          h  status means "I need help now, as this is a life threatening emergency!". An 
+          b(style='color:blue') Undefined
+          h  status means "The user has not been providing her status yet.". To change status, please click on "Set Status" button below.
+          br
+      br
+      .list-group(style='width:20%; margin:auto')
+        a.btn.btn-dark.btn-lg.home-items(href='/users')  View Directory
+        br
+        a.btn.btn-dark.btn-lg.home-items(href='/chat') Public Chat
+        br
+        a.btn.btn-dark.btn-lg.home-items(href='/status') Set Status
+        br
+        a.btn.btn-dark.btn-lg.home-items(href='/logout') Log Out
+        br
+
+        
